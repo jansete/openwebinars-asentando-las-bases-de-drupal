@@ -1,0 +1,11 @@
+ow_home.buy_food:
+  title: 'Buy food'
+  title_context: 'Ow home'
+  route_name: node.add
+  route_parameters: { node_type: 'food' }
+  appears_on:
+    - view.pantry.page
+  weight: -1
+  options:
+    attributes:
+      target: _blank

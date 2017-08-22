@@ -1,0 +1,7 @@
+name: OpenWebinars Forms
+type: module
+description: 'Module for forms examples.'
+core: 8.x
+package: Custom
+dependencies:
+  - drupal:node

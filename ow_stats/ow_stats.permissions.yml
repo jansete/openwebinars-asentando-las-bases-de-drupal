@@ -1,0 +1,6 @@
+access custom stats:
+  title: 'Allow the user to access custom stats.'
+  description: 'Permission for access to custom stats.'
+  # Esta propiedad indica que este permiso sólo debe ser asignado a roles de
+  # confianza, usamos true para ver la diferencia en UI.
+  restrict access: true

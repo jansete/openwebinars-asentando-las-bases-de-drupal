@@ -1,0 +1,4 @@
+name: Openwebinars Lorem Ipsum
+type: module
+description: 'Implements Lorem Ipsum example.'
+core: 8.x

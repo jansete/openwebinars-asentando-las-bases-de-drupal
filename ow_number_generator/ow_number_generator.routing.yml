@@ -1,0 +1,8 @@
+ow_number_generator.number:
+  path: '/number'
+  defaults:
+    _title: 'Number'
+    _controller: \Drupal\ow_number_generator\Controller\NumberController::view
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'

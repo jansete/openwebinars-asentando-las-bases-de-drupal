@@ -1,0 +1,30 @@
+ow_home.home:
+  title: 'Go home'
+  description: 'Go home link.'
+  weight: 1
+  menu_name: main
+  route_name: ow_home.home
+  expanded: TRUE
+
+# Ejemplo de enlace hijo.
+ow_home.view_profile:
+  title: 'View profile'
+  description: 'Link with route parameters.'
+  weight: 3
+  menu_name: main
+  route_name: entity.user.canonical
+  route_parameters: { user: 1 }
+  parent: ow_home.home
+
+# Ejemplo de enlace externo con options.
+ow_home.openwebinars:
+  title: 'OpenWebinars'
+  title_context: 'Ow menu'
+  description: 'OpenWebinars external link.'
+  weight: 4
+  menu_name: main
+  url: https://openwebinars.net/
+  options:
+    attributes:
+      target: _blank
+    fragment: testimonios

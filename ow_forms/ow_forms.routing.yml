@@ -1,0 +1,31 @@
+ow_forms.hello_form:
+  path: '/hello-form'
+  defaults:
+    _title: 'Display message'
+    _form: \Drupal\ow_forms\Form\HelloForm
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+
+ow_forms.change_node_status_form:
+  path: '/change-node-status/{node}'
+  defaults:
+    _form: \Drupal\ow_forms\Form\ChangeNodeStatusConfirmForm
+  requirements:
+    _permission: 'administer nodes'
+
+ow_forms.form_state_example:
+  path: '/form-state-example'
+  defaults:
+    _form: \Drupal\ow_forms\Form\FormStateExampleForm
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+
+ow_forms.retrieve_form:
+  path: '/custom-retrieve-form'
+  defaults:
+    _controller: \Drupal\ow_forms\Controller\HelloController::customRetrieveForm
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'

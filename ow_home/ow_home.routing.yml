@@ -1,0 +1,43 @@
+ow_home.home:
+  path: '/home'
+  defaults:
+    _controller: \Drupal\ow_home\Controller\HomeController::home
+    _title: 'Home'
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+
+ow_home.kitchen:
+  path: '/home/kitchen'
+  defaults:
+    _controller: \Drupal\ow_home\Controller\HomeController::kitchen
+    _title: 'Kitchen'
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+
+ow_home.bathroom:
+  path: '/home/bathroom'
+  defaults:
+    _controller: \Drupal\ow_home\Controller\HomeController::bathroom
+    _title: 'Bathroom'
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+
+ow_home.bedroom:
+  path: '/home/bedroom'
+  defaults:
+    _controller: \Drupal\ow_home\Controller\HomeController::bedroom
+    _title: 'Bedroom'
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+
+ow_home.eat_food_form:
+  path: '/home/kitchen/pantry/eat/{node}'
+  defaults:
+    _form: \Drupal\ow_home\Form\EatFoodConfirmForm
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'

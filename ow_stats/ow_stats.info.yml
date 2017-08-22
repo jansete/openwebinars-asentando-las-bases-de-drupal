@@ -1,0 +1,6 @@
+name: Openwebinars Stats
+type: module
+description: 'Implements custom stats'
+core: 8.x
+dependencies:
+  - drupal:node

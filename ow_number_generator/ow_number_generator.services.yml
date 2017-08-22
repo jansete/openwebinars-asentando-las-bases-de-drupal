@@ -1,0 +1,7 @@
+services:
+  ow_number_generator.number_generator:
+    class: Drupal\ow_number_generator\NumberGenerator
+
+  ow_number_generator.user_message:
+    class: Drupal\ow_number_generator\UserMessage
+    arguments: ['@current_user']

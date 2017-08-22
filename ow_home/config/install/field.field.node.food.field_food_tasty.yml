@@ -1,0 +1,23 @@
+uuid: 180eb183-7180-44aa-9d78-0df1f28635e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_food_tasty
+    - node.type.food
+id: node.food.field_food_tasty
+field_name: field_food_tasty
+entity_type: node
+bundle: food
+label: Tasty
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

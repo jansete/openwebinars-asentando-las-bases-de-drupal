@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Fichero en el que realizaremos la actualización de base de datos.
+ */
+
+/**
+ * Añadimos el valor por defecto en la propiedad de configuracion final_message.
+ */
+function ow_lorem_ipsum_update_8001() {
+  \Drupal::configFactory()
+    ->getEditable('ow_lorem_ipsum.settings')
+    ->set('final_message', 'Final message')
+    ->save();
+}

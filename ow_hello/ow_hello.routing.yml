@@ -1,0 +1,56 @@
+ow_hello.hello_world:
+  path: '/hello-world'
+  defaults:
+    _controller: \Drupal\ow_hello\Controller\HelloController::helloWorld
+    _title: 'Hello world'
+  requirements:
+    _permission: 'access content'
+
+ow_hello.hello_name:
+  path: '/hello/{name}'
+  defaults:
+    _controller: \Drupal\ow_hello\Controller\HelloController::helloName
+    # Podemos añadir un valor por defecto para que el parámetro no sea
+    # obligatorio.
+    name: 'Christopher'
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+    name: '[a-zA-Z]+'
+
+ow_hello.hello_user:
+  path: '/hello/{user}'
+  defaults:
+    _controller: \Drupal\ow_hello\Controller\HelloController::helloUser
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+    user: \d+
+
+ow_hello.hello_users:
+  path: '/hello/{user1}/{user2}'
+  defaults:
+    _controller: \Drupal\ow_hello\Controller\HelloController::helloUsers
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+    user1: \d+
+    user2: \d+
+  options:
+    parameters:
+      user1:
+        type: entity:user
+      user2:
+        type: entity:user
+
+ow_hello.policeman:
+  path: '/policeman/{policeman}'
+  defaults:
+    _controller: \Drupal\ow_hello\Controller\PolicemanController::view
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+  options:
+    parameters:
+      policeman:
+        type: policeman

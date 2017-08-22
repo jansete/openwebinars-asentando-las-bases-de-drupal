@@ -1,0 +1,17 @@
+ow_lorem_ipsum.settings_form:
+  path: '/admin/lorem-ipsum'
+  defaults:
+    _title: 'Lorem Ipsum settings form'
+    _form: \Drupal\ow_lorem_ipsum\Form\SettingsForm
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'
+
+ow_lorem_ipsum.view:
+  path: '/lorem-ipsum'
+  defaults:
+    _title: 'Lorem Ipsum'
+    _controller: \Drupal\ow_lorem_ipsum\Controller\LoremIpsumController::view
+  requirements:
+    # Damos acceso a todos los usuarios para probar esta ruta.
+    _access: 'TRUE'

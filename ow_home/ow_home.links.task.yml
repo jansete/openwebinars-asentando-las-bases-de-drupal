@@ -1,0 +1,37 @@
+# Enlaces de primer nivel.
+ow_home.home:
+  title: 'Home'
+  route_name: ow_home.home
+  base_route: ow_home.home
+
+ow_home.kitchen:
+  title: 'Kitchen'
+  route_name: ow_home.kitchen
+  base_route: ow_home.home
+
+ow_home.bathroom:
+  title: 'Bathroom'
+  route_name: ow_home.bathroom
+  base_route: ow_home.home
+
+ow_home.bedroom:
+  title: 'Bedroom'
+  title_context: 'Ow menu'
+  route_name: ow_home.bedroom
+  base_route: ow_home.home
+  weight: -1
+  options:
+    attributes:
+      target: _blank
+
+# Enlaces de segundo nivel.
+ow_home.pantry:
+  title: 'Pantry'
+  route_name: view.pantry.page
+  parent_id: ow_home.kitchen
+
+ow_home.shop:
+  title: 'Shop'
+  route_name: node.add
+  route_parameters: { node_type: 'food' }
+  parent_id: ow_home.kitchen

@@ -1,0 +1,7 @@
+name: OpenWebinars Hello
+type: module
+description: 'Hello! Nuestro primer módulo en Drupal 8.'
+core: 8.x
+package: Custom
+dependencies:
+  - drupal:user

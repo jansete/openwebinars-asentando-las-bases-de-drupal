@@ -1,0 +1,15 @@
+ow_stats.stats:
+  path: '/stats'
+  defaults:
+    _controller: \Drupal\ow_stats\Controller\StatsController::stats
+    _title: 'Stats'
+  requirements:
+    _permission: 'access custom stats'
+
+ow_stats.node_stats:
+  path: '/node/{node}/stats'
+  defaults:
+    _controller: \Drupal\ow_stats\Controller\StatsController::nodeStats
+    _title: 'Node stats'
+  requirements:
+    _custom_access: \Drupal\ow_stats\Controller\StatsController::nodeStatsCustomAccess

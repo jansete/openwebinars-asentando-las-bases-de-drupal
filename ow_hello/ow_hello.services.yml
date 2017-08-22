@@ -1,0 +1,10 @@
+services:
+  ow_hello.policeman_param_converter:
+    class: Drupal\ow_hello\Routing\PolicemanParamConverter
+    tags:
+      - { name: paramconverter }
+
+  ow_hello.route_subscriber:
+    class: Drupal\ow_hello\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

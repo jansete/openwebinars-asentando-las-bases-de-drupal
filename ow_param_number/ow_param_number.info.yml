@@ -1,0 +1,4 @@
+name: Openwebinars Param Number
+type: module
+description: 'Module for Services examples.'
+core: 8.x

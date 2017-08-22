@@ -1,0 +1,4 @@
+ow_home.eat:
+  title: 'Eat'
+  route_name: 'ow_home.eat_food_form'
+  group: node

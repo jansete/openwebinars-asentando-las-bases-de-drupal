@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Fichero que usaremos para implementar los hooks.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_form_alter().
+ */
+function ow_forms_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Por disposición en el teclado, muchos programadores usan esta línea para
+  // una depuración rápida.
+  /* $a = 0; */
+
+  // Ejemplo de condición para alterar un formulario. También se podría hacer
+  // con un switch.
+  if ($form_id == 'search_form') {
+
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * En este hook alteramos el formulario de búsqueda para añadir un checkbox y
+ * un nuevo callback en el envío de datos (submit).
+ */
+function ow_forms_form_search_form_alter(&$form, FormStateInterface $form_state) {
+  $form['say_my_name'] = [
+    '#type' => 'checkbox',
+    '#title' => new TranslatableMarkup('Say my name'),
+  ];
+  $form['#submit'][] = 'ow_forms_form_search_form_submit';
+}
+
+/**
+ * Submit custom añadido en ow_forms_form_search_form_alter().
+ *
+ * En este submit mostramos un mensaje por pantalla si el checkbox
+ * "say_my_name" está marcado.
+ */
+function ow_forms_form_search_form_submit(array &$form, FormStateInterface $form_state) {
+  if ($form_state->getValue('say_my_name')) {
+    $user = Drupal::currentUser();
+    drupal_set_message(new TranslatableMarkup('Hello @name', [
+      '@name' => $user->getDisplayName(),
+    ]));
+  }
+}

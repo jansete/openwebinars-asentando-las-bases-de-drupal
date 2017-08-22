@@ -1,0 +1,29 @@
+uuid: fc9eced7-c4cc-4732-a95f-5d18e1fe865c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.food.field_food_tasty
+    - node.type.food
+  module:
+    - user
+id: node.food.default
+targetEntityType: node
+bundle: food
+mode: default
+content:
+  field_food_tasty:
+    weight: 101
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

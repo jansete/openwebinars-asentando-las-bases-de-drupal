@@ -1,0 +1,19 @@
+uuid: 57e46c13-2460-48dc-95d2-1497101408ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.food
+  module:
+    - user
+id: node.food.teaser
+targetEntityType: node
+bundle: food
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

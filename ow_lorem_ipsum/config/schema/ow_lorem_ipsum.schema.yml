@@ -1,0 +1,21 @@
+ow_lorem_ipsum.settings:
+  type: config_object
+  mapping:
+    paragraphs_amount:
+      type: integer
+      label: 'Paragraphs amount.'
+    paragraphs_1:
+      type: text
+      label: 'First text paragraph.'
+    paragraphs_2:
+      type: text
+      label: 'Second text paragraph.'
+    paragraphs_3:
+      type: text
+    show_final_message:
+      type: boolean
+      label: 'Boolean that show the final message.'
+      label: 'Third text paragraph.'
+    final_message:
+      type: text
+      label: 'Final message.'
